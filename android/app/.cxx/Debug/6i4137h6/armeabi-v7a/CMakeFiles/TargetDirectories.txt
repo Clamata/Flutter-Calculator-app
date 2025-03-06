@@ -1,0 +1,2 @@
+C:/Users/klaud/Projects/calc_numz/android/app/.cxx/Debug/6i4137h6/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/klaud/Projects/calc_numz/android/app/.cxx/Debug/6i4137h6/armeabi-v7a/CMakeFiles/rebuild_cache.dir
