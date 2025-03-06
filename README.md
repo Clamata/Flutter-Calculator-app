@@ -17,7 +17,9 @@
 
 ## 🔍 **Technologies used**
 ⚡ **Provider for State Management**- The `Provider` package is used to manage the app’s state efficiently.
+
 📱 **Responsive Design** – The app adapts to different screen sizes using layout widgets like `Expanded`, `SizedBox`, and `MediaQuery`.
+
 🧩 **Regular Expressions (Regex) for Input Processing** - Used for processing user input, mostly in handling mathematical expressions.
 
 ## ⚡Installation
