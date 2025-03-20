@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
+
 class CalcButton extends StatelessWidget {
-  const CalcButton({super.key, this.onPressed, this.text = "", this.icon, this.gradient = kGrayCircular, this.color = Colors.black45});
+  const CalcButton(
+      {super.key,
+      this.onPressed,
+      this.text = "",
+      this.icon,
+      this.gradient = kGrayCircular,
+      this.color = Colors.black45});
   final String text;
   final Gradient gradient;
   final VoidCallback? onPressed;
@@ -10,20 +17,21 @@ class CalcButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      splashColor: Color(0xFF6d7df2),
-      borderRadius:
-          BorderRadius.circular(MediaQuery.of(context).size.height / 90),
-      onTap: onPressed ?? () {},
-      child: Container(
-        decoration: BoxDecoration(
-            color: Colors.blueGrey[300],
-            borderRadius:
-                BorderRadius.circular(MediaQuery.of(context).size.height / 50),
-            gradient: gradient),
-        child: Center(
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(MediaQuery.of(context).size.height/90),
+        gradient: gradient,
+      ),
+      child: RawMaterialButton(
+          onPressed: onPressed ?? () {},
+          padding: EdgeInsets.all(0),
+          child: Center(
             child: icon != null
-                ? Icon(icon, color: color,size: MediaQuery.of(context).size.height / 30,)
+                ? Icon(
+                    icon,
+                    color: color,
+                    size: MediaQuery.of(context).size.height / 30,
+                  )
                 : Text(
                     text,
                     style: TextStyle(
@@ -31,8 +39,8 @@ class CalcButton extends StatelessWidget {
                         fontSize: MediaQuery.of(context).size.height / 30,
                         color: color,
                         fontWeight: FontWeight.bold),
-                  )),
-      ),
+                  ),
+          )),
     );
   }
 }
